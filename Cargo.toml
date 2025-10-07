@@ -1,0 +1,10 @@
+[package]
+name = "rust-high-performance-data-processing"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+arrow = "52.0.0"
+datafusion = "38.0.0"
+tokio = { version = "1", features = ["full"] }
+csv = "1.1"
