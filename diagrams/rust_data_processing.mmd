@@ -1,0 +1,7 @@
+graph LR
+    DATA[Raw Data] --> RUST_APP[Rust Application]
+    RUST_APP --> PARSE[Parse Data]
+    PARSE --> PROCESS[Process Data High-Performance]
+    PROCESS --> AGGREGATE[Aggregate Results]
+    AGGREGATE --> OUTPUT[Output Data]
+

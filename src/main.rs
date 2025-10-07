@@ -1,34 +1,39 @@
-use datafusion::prelude::*;
-use datafusion::error::Result;
+// Rust High-Performance Data Processing
+// Author: Gabriel Demetrios Lafis
+// Year: 2025
 
-#[tokio::main]
-async fn main() -> Result<()> {
-    // Create a new SessionContext
-    let ctx = SessionContext::new();
+use std::time::Instant;
 
-    // Create dummy data
-    let _ = std::fs::create_dir_all("data");
-    let mut wtr = csv::Writer::from_path("data/sales.csv")?;
-    wtr.write_record(&["product_category", "sales"])?;
-    wtr.write_record(&["Electronics", "1500.50"])?;
-    wtr.write_record(&["Books", "300.20"])?;
-    wtr.write_record(&["Clothing", "800.75"])?;
-    wtr.write_record(&["Electronics", "2500.00"])?;
-    wtr.write_record(&["Home Goods", "1200.90"])?;
-    wtr.write_record(&["Books", "150.00"])?;
-    wtr.flush()?;
+#[derive(Debug)]
+struct DataRecord {
+    id: u32,
+    value: f64,
+}
 
-    // Register a CSV file as a table
-    ctx.register_csv("sales", "data/sales.csv", CsvReadOptions::new()).await?;
+fn process_data(records: &[DataRecord]) -> f64 {
+    records.iter().map(|r| r.value).sum::<f64>() / records.len() as f64
+}
 
-    // Define a SQL query
-    let sql = "SELECT product_category, SUM(sales) as total_sales FROM sales GROUP BY product_category ORDER BY total_sales DESC LIMIT 5";
+fn main() {
+    println!("===========================================");
+    println!("Rust High-Performance Data Processing");
+    println!("===========================================");
 
-    // Execute the query
-    let df = ctx.sql(sql).await?;
+    let start = Instant::now();
 
-    // Print the results
-    df.show().await?;
+    // Generate sample data
+    let records: Vec<DataRecord> = (0..1_000_000)
+        .map(|i| DataRecord {
+            id: i,
+            value: (i as f64) * 1.5,
+        })
+        .collect();
 
-    Ok(())
+    let avg = process_data(&records);
+    let duration = start.elapsed();
+
+    println!("Processed {} records", records.len());
+    println!("Average value: {:.2}", avg);
+    println!("Time elapsed: {:?}", duration);
+    println!("===========================================");
 }
