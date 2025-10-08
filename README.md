@@ -3,9 +3,6 @@
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Mermaid](https://img.shields.io/badge/Diagrams-Mermaid-orange?style=for-the-badge&logo=mermaid)
 
-Este projeto pode ser visualizado e interagido através do GitHub Pages: [https://gabrieldemetrioslafis.github.io/rust-high-performance-data-processing/](https://gabrieldemetrioslafis.github.io/rust-high-performance-data-processing/)
-
-This project can be viewed and interacted with via GitHub Pages: [https://gabrieldemetrioslafis.github.io/rust-high-performance-data-processing/](https://gabrieldemetrioslafis.github.io/rust-high-performance-data-processing/)
 
 ---
 
