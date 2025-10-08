@@ -4,6 +4,8 @@
 
 use std::time::Instant;
 
+mod csv_processing;
+
 #[derive(Debug)]
 struct DataRecord {
     id: u32,
@@ -36,4 +38,14 @@ fn main() {
     println!("Average value: {:.2}", avg);
     println!("Time elapsed: {:?}", duration);
     println!("===========================================");
+
+    // Advanced CSV Processing Example
+    println!("\nIniciando exemplo de processamento CSV avançado (Titanic)...");
+    let csv_file_path = "./data/titanic.csv";
+    match csv_processing::process_titanic_csv(csv_file_path) {
+        Ok(_) => println!("Processamento CSV do Titanic concluído com sucesso."),
+        Err(e) => eprintln!("Erro ao processar CSV do Titanic: {}", e),
+    }
+    println!("===========================================");
 }
+

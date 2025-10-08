@@ -2,6 +2,9 @@
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Mermaid](https://img.shields.io/badge/Diagrams-Mermaid-orange?style=for-the-badge&logo=mermaid)
+[![Crates.io](https://img.shields.io/crates/v/rust-high-performance-data-processing.svg)](https://crates.io/crates/rust-high-performance-data-processing)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/galafis/rust-high-performance-data-processing/actions/workflows/rust.yml/badge.svg)](https://github.com/galafis/rust-high-performance-data-processing/actions/workflows/rust.yml)
 
 
 ---
@@ -24,6 +27,7 @@ O principal objetivo deste projeto é **fornecer exemplos práticos, benchmarks 
 - **Documentação Completa**: Cada exemplo é acompanhado de documentação detalhada, benchmarks e casos de uso práticos para facilitar a compreensão e a aplicação.
 - **Testes Incluídos**: Módulos de código validados através de testes unitários e de integração, garantindo a robustez e a confiabilidade das implementações.
 - **Abordagem Didática**: Conteúdo apresentado de forma didática, ideal para aprendizado e referência, com explicações claras sobre os conceitos e a aplicação prática.
+- **Processamento Avançado de CSV**: Um novo módulo (`csv_processing`) foi adicionado para demonstrar o processamento eficiente de arquivos CSV, utilizando o dataset do Titanic como exemplo.
 
 
 
@@ -42,9 +46,10 @@ The main objective of this project is to **provide practical examples, benchmark
 - **Efficient Concurrency**: Utilization of native Rust features to build concurrent and parallel data pipelines safely and performantly.
 - **Data Ecosystem Integration**: How to integrate Rust with popular data tools and formats like Apache Arrow and Parquet.
 - **Professional Code**: Well-structured code examples, following industry best practices, with a focus on clarity, efficiency, and internal documentation.
-- **Complete Documentation**: Each example is accompanied by detailed documentation, benchmarks, and practical use cases to facilitate understanding and application.
+- **Complete Documentation**: Each example is accompanied by detailed documentation, benchmarks and practical use cases to facilitate understanding and application.
 - **Tests Included**: Code modules validated through unit and integration tests, ensuring the robustness and reliability of the implementations.
 - **Didactic Approach**: Content presented didactically, ideal for learning and reference, with clear explanations of concepts and practical application.
+- **Advanced CSV Processing**: A new module (`csv_processing`) has been added to demonstrate efficient CSV file processing, using the Titanic dataset as an example.
 
 ### 📊 Visualization
 
@@ -78,6 +83,12 @@ cd rust-high-performance-data-processing
 # Siga as instruções específicas em src/ e docs/
 ```
 
+Para executar o exemplo de processamento CSV avançado:
+
+```bash
+cargo run
+```
+
 ---
 
 ## 🤝 Contribuição
@@ -93,3 +104,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ---
 
 **Autor:** Gabriel Demetrios Lafis  \n**Ano:** 2025
+

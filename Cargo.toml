@@ -4,11 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-rayon = "1.8.0"
-arrow = "52.0.0"
-datafusion = "38.0.0"
-tokio = { version = "1", features = ["full"] }
 csv = "1.1"
+serde = { version = "1.0", features = ["derive"] }
 
 [dev-dependencies]
 assert_cmd = "2.0.14"
