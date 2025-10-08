@@ -92,6 +92,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ---
 
-**Autor:** Gabriel Demetrios Lafis  
-**Ano:** 2025
-
+**Autor:** Gabriel Demetrios Lafis  \n**Ano:** 2025
