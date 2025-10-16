@@ -1,5 +1,28 @@
+# Rust build artifacts
 /target
+*.pdb
 
+# Cargo.lock should be excluded for libraries, but included for binaries
+# We'll keep it since this is also a binary application
 
-Cargo.lock
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Benchmark results
+/benches/target/
+
+# Test coverage
+*.profraw
+*.profdata
+cobertura.xml
+lcov.info
+
 
