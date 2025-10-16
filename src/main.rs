@@ -2,19 +2,8 @@
 // Author: Gabriel Demetrios Lafis
 // Year: 2025
 
+use rust_high_performance_data_processing::{csv_processing, process_data, DataRecord};
 use std::time::Instant;
-
-mod csv_processing;
-
-#[derive(Debug)]
-struct DataRecord {
-    id: u32,
-    value: f64,
-}
-
-fn process_data(records: &[DataRecord]) -> f64 {
-    records.iter().map(|r| r.value).sum::<f64>() / records.len() as f64
-}
 
 fn main() {
     println!("===========================================");
@@ -37,6 +26,12 @@ fn main() {
     println!("Processed {} records", records.len());
     println!("Average value: {:.2}", avg);
     println!("Time elapsed: {:?}", duration);
+
+    // Display some sample records
+    println!("\nSample records:");
+    for record in records.iter().take(3) {
+        println!("  Record ID: {}, Value: {:.2}", record.id, record.value);
+    }
     println!("===========================================");
 
     // Advanced CSV Processing Example
@@ -48,4 +43,3 @@ fn main() {
     }
     println!("===========================================");
 }
-
