@@ -3,9 +3,6 @@
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Mermaid](https://img.shields.io/badge/Diagrams-Mermaid-orange?style=for-the-badge&logo=mermaid)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/galafis/rust-high-performance-data-processing/actions/workflows/rust.yml/badge.svg)](https://github.com/galafis/rust-high-performance-data-processing/actions/workflows/rust.yml)
-![Tests](https://img.shields.io/badge/tests-13%20passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-high-brightgreen)
 
 ---
 
@@ -105,9 +102,6 @@ rust-high-performance-data-processing/
 ├── scripts/                # Utility scripts
 │   ├── build_and_test.sh  # Build and test automation
 │   └── run_benchmarks.sh  # Benchmark execution script
-├── .github/                # GitHub configuration
-│   └── workflows/         # CI/CD workflows
-│       └── rust.yml       # Rust CI pipeline
 ├── Cargo.toml             # Project configuration and dependencies
 ├── Cargo.lock             # Locked dependency versions
 ├── LICENSE                # MIT license
