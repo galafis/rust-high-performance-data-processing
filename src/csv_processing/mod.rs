@@ -124,18 +124,18 @@ impl Default for TitanicStatistics {
 pub fn process_titanic_csv(file_path: &str) -> Result<(), Box<dyn Error>> {
     let stats = analyze_titanic_csv(file_path)?;
 
-    println!("\n--- Análise de Dados do Titanic ---");
+    println!("\n--- Titanic Data Analysis ---");
     println!(
-        "Total de passageiros processados: {}",
+        "Total passengers processed: {}",
         stats.total_passengers
     );
     println!(
-        "Passageiros que sobreviveram: {}",
+        "Passengers who survived: {}",
         stats.survived_passengers
     );
-    println!("Taxa de sobrevivência: {:.2}%", stats.survival_rate);
-    println!("Passageiros masculinos: {}", stats.male_passengers);
-    println!("Passageiros femininos: {}", stats.female_passengers);
+    println!("Survival rate: {:.2}%", stats.survival_rate);
+    println!("Male passengers: {}", stats.male_passengers);
+    println!("Female passengers: {}", stats.female_passengers);
     println!("------------------------------------\n");
 
     Ok(())

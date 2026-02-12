@@ -12,14 +12,13 @@ Este repositório explora e demonstra **técnicas e implementações para proces
 
 ### 🎯 Objetivo
 
-O principal objetivo deste projeto é **fornecer exemplos práticos, benchmarks e tutoriais detalhados** sobre como utilizar Rust para tarefas de processamento de dados. Serão abordados tópicos como manipulação de dados em memória, serialização/desserialização eficiente, integração com bibliotecas como Apache Arrow e Polars, e estratégias para paralelização e concorrência.
+O principal objetivo deste projeto é **fornecer exemplos práticos, benchmarks e tutoriais detalhados** sobre como utilizar Rust para tarefas de processamento de dados. Serão abordados tópicos como manipulação de dados em memória, serialização/desserialização eficiente com CSV e análise estatística de datasets.
 
 ### ✨ Destaques
 
 - **Performance Extrema**: Demonstrações de como Rust oferece performance comparável a C/C++ para operações intensivas em dados.
 - **Segurança de Memória**: Exemplos que ilustram como o sistema de *ownership* e *borrowing* de Rust previne erros comuns de memória em tempo de compilação.
-- **Concorrência Eficiente**: Utilização de recursos nativos de Rust para construir pipelines de dados concorrentes e paralelas de forma segura e performática.
-- **Integração com Ecossistema de Dados**: Como integrar Rust com ferramentas e formatos de dados populares como CSV, JSON e Parquet.
+- **Integração com CSV**: Processamento eficiente de arquivos CSV utilizando a biblioteca `csv` com desserialização automática via Serde.
 - **Código Profissional**: Exemplos de código bem estruturados, seguindo as melhores práticas da indústria, com foco em clareza, eficiência e documentação interna.
 - **Documentação Completa**: Cada exemplo é acompanhado de documentação detalhada, benchmarks e casos de uso práticos para facilitar a compreensão e a aplicação.
 - **Testes Abrangentes**: Módulos de código validados através de testes unitários, de integração e de documentação, garantindo a robustez e a confiabilidade das implementações.
@@ -34,14 +33,13 @@ This repository explores and demonstrates **techniques and implementations for h
 
 ### 🎯 Objective
 
-The main objective of this project is to **provide practical examples, benchmarks, and detailed tutorials** on how to use Rust for data processing tasks. Topics covered include in-memory data manipulation, efficient serialization/deserialization, integration with libraries like Apache Arrow and Polars, and strategies for parallelization and concurrency.
+The main objective of this project is to **provide practical examples, benchmarks, and detailed tutorials** on how to use Rust for data processing tasks. Topics covered include in-memory data manipulation, efficient CSV serialization/deserialization, and statistical dataset analysis.
 
 ### ✨ Highlights
 
 - **Extreme Performance**: Demonstrations of how Rust offers performance comparable to C/C++ for data-intensive operations.
 - **Memory Safety**: Examples illustrating how Rust's ownership and borrowing system prevents common memory errors at compile time.
-- **Efficient Concurrency**: Utilization of native Rust features to build concurrent and parallel data pipelines safely and performantly.
-- **Data Ecosystem Integration**: How to integrate Rust with popular data tools and formats like CSV, JSON, and Parquet.
+- **CSV Integration**: Efficient CSV file processing using the `csv` crate with automatic deserialization via Serde.
 - **Professional Code**: Well-structured code examples, following industry best practices, with a focus on clarity, efficiency, and internal documentation.
 - **Complete Documentation**: Each example is accompanied by detailed documentation, benchmarks and practical use cases to facilitate understanding and application.
 - **Comprehensive Testing**: Code modules validated through unit tests, integration tests, and documentation tests, ensuring the robustness and reliability of the implementations.
@@ -98,6 +96,7 @@ rust-high-performance-data-processing/
 │   └── rust_data_processing.mmd
 ├── docs/                   # Additional documentation
 │   ├── ARCHITECTURE.md    # Architecture and design documentation
+│   ├── AUDIT_SUMMARY.md   # Repository audit summary
 │   └── PERFORMANCE_GUIDE.md  # Performance optimization guide
 ├── scripts/                # Utility scripts
 │   ├── build_and_test.sh  # Build and test automation
@@ -157,14 +156,14 @@ Sample records:
   Record ID: 2, Value: 3.00
 ===========================================
 
-Iniciando exemplo de processamento CSV avançado (Titanic)...
+Advanced CSV Processing (Titanic dataset)...
 
---- Análise de Dados do Titanic ---
-Total de passageiros processados: 891
-Passageiros que sobreviveram: 342
-Taxa de sobrevivência: 38.38%
-Passageiros masculinos: 577
-Passageiros femininos: 314
+--- Titanic Data Analysis ---
+Total passengers processed: 891
+Passengers who survived: 342
+Survival rate: 38.38%
+Male passengers: 577
+Female passengers: 314
 ------------------------------------
 ```
 
@@ -183,7 +182,7 @@ This runs:
 - **Integration tests** (5 tests in `tests/` directory)
 - **Documentation tests** (2 tests from code examples)
 
-**Total: 13 passing tests** ✓
+**Total: 15 passing tests** ✓
 
 ### Run Specific Test Suites
 
@@ -339,13 +338,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Year:** 2025  
 **Contact:** [GitHub](https://github.com/galafis)
 
----
 
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star! ⭐
-
----
-
-**Happy Data Processing with Rust! 🦀**
 

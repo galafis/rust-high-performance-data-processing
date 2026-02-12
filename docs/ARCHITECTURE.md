@@ -167,12 +167,12 @@ The architecture is designed for easy extension:
 
 ### Typical Performance
 
-| Metric | Value |
-|--------|-------|
-| 1M records processing | ~27ms |
-| CSV parsing (891 rows) | ~1-2ms |
-| Memory efficiency | Near-optimal |
-| CPU utilization | Single-core |
+| Metric | Debug | Release |
+|--------|-------|---------|
+| 1M records processing | ~27ms | ~3ms |
+| CSV parsing (891 rows) | ~1-2ms | ~1ms |
+| Memory efficiency | Near-optimal | Near-optimal |
+| CPU utilization | Single-core | Single-core |
 
 ### Optimization Opportunities
 

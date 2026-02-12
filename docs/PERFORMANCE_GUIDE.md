@@ -22,11 +22,12 @@ let records: Vec<DataRecord> = (0..1_000_000)
     .collect();
 ```
 
-### 2. Paralelização com Rayon
+### 2. Paralelização com Rayon (Melhoria Futura)
 
-Para operações que podem ser paralelizadas, considere usar a biblioteca Rayon:
+Para operações que podem ser paralelizadas, considere adicionar a biblioteca Rayon como dependência:
 
 ```rust
+// Exemplo: requer adicionar rayon = "1.10" ao Cargo.toml
 use rayon::prelude::*;
 
 let sum: f64 = records.par_iter()
@@ -138,9 +139,12 @@ cargo flamegraph
 
 ## 🎓 Exemplos Práticos
 
-### Processamento Paralelo de Múltiplos Arquivos
+### Processamento Paralelo de Múltiplos Arquivos (Melhoria Futura)
+
+Com a biblioteca Rayon adicionada como dependência:
 
 ```rust
+// Exemplo: requer adicionar rayon = "1.10" ao Cargo.toml
 use rayon::prelude::*;
 
 let files = vec!["data1.csv", "data2.csv", "data3.csv"];

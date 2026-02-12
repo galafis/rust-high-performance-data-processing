@@ -32,12 +32,13 @@ fn benchmark_csv_processing(c: &mut Criterion) {
 fn benchmark_data_generation(c: &mut Criterion) {
     c.bench_function("generate_1M_records", |b| {
         b.iter(|| {
-            let _records: Vec<DataRecord> = (0..1_000_000)
+            let records: Vec<DataRecord> = (0..1_000_000)
                 .map(|i| DataRecord {
                     id: i,
                     value: (i as f64) * 1.5,
                 })
                 .collect();
+            black_box(records)
         });
     });
 }

@@ -35,11 +35,11 @@ fn main() {
     println!("===========================================");
 
     // Advanced CSV Processing Example
-    println!("\nIniciando exemplo de processamento CSV avançado (Titanic)...");
+    println!("\nAdvanced CSV Processing (Titanic dataset)...");
     let csv_file_path = "./data/titanic.csv";
     match csv_processing::process_titanic_csv(csv_file_path) {
-        Ok(_) => println!("Processamento CSV do Titanic concluído com sucesso."),
-        Err(e) => eprintln!("Erro ao processar CSV do Titanic: {}", e),
+        Ok(_) => println!("Titanic CSV processing completed successfully."),
+        Err(e) => eprintln!("Error processing Titanic CSV: {}", e),
     }
     println!("===========================================");
 }

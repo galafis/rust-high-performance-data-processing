@@ -6,7 +6,7 @@
 pub mod csv_processing;
 
 /// Represents a single data record with an ID and value
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct DataRecord {
     /// Unique identifier for the record
     pub id: u32,
@@ -69,7 +69,6 @@ mod tests {
     fn test_data_record_clone() {
         let record = DataRecord { id: 1, value: 42.0 };
         let cloned = record.clone();
-        assert_eq!(record.id, cloned.id);
-        assert_eq!(record.value, cloned.value);
+        assert_eq!(record, cloned);
     }
 }
